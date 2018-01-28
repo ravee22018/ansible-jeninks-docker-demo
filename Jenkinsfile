@@ -11,5 +11,10 @@ pipeline {
         echo 'Echo Build'
       }
     }
+    stage('Invoke') {
+      steps {
+        ansiblePlaybook '/var/echo.yml'
+      }
+    }
   }
 }
