@@ -16,5 +16,10 @@ pipeline {
         ansiblePlaybook '/var/echo.yml'
       }
     }
+    stage('Prod') {
+      steps {
+        ansiblePlaybook '/home/cenos/echo.yml'
+      }
+    }
   }
 }
